@@ -12,7 +12,7 @@ Each folder in `projects/` is one project:
 | `docs/` | Drawings and reports (PDF) |
 | `img/` | Photos and renders |
 
-Pushing to `main` rebuilds the site (`build.py` writes `manifest.json`, then GitHub Pages deploys).
+After changing projects, run `python build.py` to refresh `manifest.json`, then push to `main`. GitHub Pages serves the site straight from the branch (the sync script does both for you).
 
 ## Automatic sync
 `tools/setup.ps1` clones this repo to `Documents\cad-portfolio` and schedules `tools/sync.ps1` daily. The sync:

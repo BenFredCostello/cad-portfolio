@@ -6,7 +6,7 @@
 #    To start a new project, copy projects\_template to projects\<new-name> and edit project.json.
 # 2. Uses Autodesk Inventor (if installed) to export an STL for any published .ipt/.iam
 #    that doesn't have one yet, so the website can show it in 3D.
-# 3. Commits and pushes any changes. GitHub then rebuilds the website automatically.
+# 3. Rebuilds manifest.json, then commits and pushes. GitHub Pages serves the site straight from main.
 
 $ErrorActionPreference = 'Continue'
 $Repo   = Split-Path -Parent $PSScriptRoot
@@ -89,8 +89,9 @@ if ($needs) {
 }
 
 # ---- 3. Publish ----
-git add -A projects 2>&1 | Out-Null
-if (git status --porcelain projects) {
+python build.py 2>&1 | Out-Null
+git add -A projects manifest.json 2>&1 | Out-Null
+if (git status --porcelain projects manifest.json) {
   git commit -m "Portfolio sync $(Get-Date -Format 'yyyy-MM-dd')" --quiet
   git push --quiet
   Log "Published changes"
