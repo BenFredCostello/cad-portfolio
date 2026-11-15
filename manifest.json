@@ -1,0 +1,534 @@
+{
+ "projects": [
+  {
+   "title": "Real-time captioning glasses",
+   "year": 2026,
+   "context": "Part IV project (MECHENG), University of Auckland",
+   "order": 1,
+   "cover": "projects/transcriber-glasses/img/cover.jpg",
+   "summary": "A clip-on attachment that puts live captions in front of the wearer, for people with hearing loss.",
+   "description": "A glasses-mounted microphone streams speech over BLE to an iPhone for cloud transcription. The finished captions come back to a small OLED, and an optical path of two 15 mm lenses and a mirror projects them into view. I designed the printed housing, lid and extension arm in Inventor. The lens seats and sliding fits sit in the plane of the print bed, so the nozzle traces them directly and the interference fits assemble consistently.",
+   "highlights": [
+    "Housing, lid and arm print on one plate in 1 h 47 min (PLA, Prusa MK4S)",
+    "Interference-fit lenses, OLED and lid, with no fasteners",
+    "Separate counterweight on the opposite arm balances the glasses"
+   ],
+   "tools": [
+    "Autodesk Inventor",
+    "PrusaSlicer",
+    "ESP32-S3"
+   ],
+   "slug": "transcriber-glasses",
+   "models": [
+    {
+     "name": "assembly.stl",
+     "path": "projects/transcriber-glasses/models/assembly.stl",
+     "size": 84884
+    },
+    {
+     "name": "extension-arm.stl",
+     "path": "projects/transcriber-glasses/models/extension-arm.stl",
+     "size": 8384
+    },
+    {
+     "name": "lid.stl",
+     "path": "projects/transcriber-glasses/models/lid.stl",
+     "size": 38484
+    },
+    {
+     "name": "lower-housing.stl",
+     "path": "projects/transcriber-glasses/models/lower-housing.stl",
+     "size": 38184
+    }
+   ],
+   "cad": [
+    {
+     "name": "FinalAssembly.iam",
+     "path": "projects/transcriber-glasses/cad/FinalAssembly.iam",
+     "size": 218112
+    },
+    {
+     "name": "bottom2 (1).ipt",
+     "path": "projects/transcriber-glasses/cad/bottom2 (1).ipt",
+     "size": 513024
+    },
+    {
+     "name": "newextension2.ipt",
+     "path": "projects/transcriber-glasses/cad/newextension2.ipt",
+     "size": 317952
+    },
+    {
+     "name": "top2 (1).ipt",
+     "path": "projects/transcriber-glasses/cad/top2 (1).ipt",
+     "size": 429568
+    }
+   ],
+   "docs": [
+    {
+     "name": "drawings.pdf",
+     "path": "projects/transcriber-glasses/docs/drawings.pdf",
+     "size": 310768
+    }
+   ],
+   "images": [
+    {
+     "name": "cover.jpg",
+     "path": "projects/transcriber-glasses/img/cover.jpg",
+     "size": 130671
+    },
+    {
+     "name": "drawing.jpg",
+     "path": "projects/transcriber-glasses/img/drawing.jpg",
+     "size": 178126
+    },
+    {
+     "name": "labelled.jpg",
+     "path": "projects/transcriber-glasses/img/labelled.jpg",
+     "size": 126389
+    },
+    {
+     "name": "prototype.jpg",
+     "path": "projects/transcriber-glasses/img/prototype.jpg",
+     "size": 458443
+    }
+   ]
+  },
+  {
+   "title": "Folding V-gauge",
+   "year": 2026,
+   "context": "Personal project",
+   "order": 2,
+   "cover": "projects/v-gauge/img/cover.jpg",
+   "summary": "A 3D-printed tool that measures cylinder diameters: diameter = N \u00d7 slider reading.",
+   "description": "Two arms form a V that locks at one of four angles (\u00d71, \u00d72, \u00d75, \u00d710). A slider pushed up through the apex touches the object, and you multiply its reading by the setting. Folded to 0\u00b0, it becomes a 100 mm ruler. Each angle is set so that sin a = N/(N+2), which makes the diameter exactly N times the slider reading. The geometry is generated from a parametric Python script, and a fit-test print tunes the clearances.",
+   "highlights": [
+    "Measures 13\u2013322 mm diameters across four settings",
+    "Snap pins and index pegs, with no bolts or other hardware",
+    "Clearances tuned with a printed fit test (0.15\u20130.45 mm)"
+   ],
+   "tools": [
+    "Python (parametric CAD)",
+    "Autodesk Inventor",
+    "FDM printing"
+   ],
+   "slug": "v-gauge",
+   "models": [
+    {
+     "name": "arm-left.stl",
+     "path": "projects/v-gauge/models/arm-left.stl",
+     "size": 295784
+    },
+    {
+     "name": "arm-right-ruler.stl",
+     "path": "projects/v-gauge/models/arm-right-ruler.stl",
+     "size": 2235284
+    },
+    {
+     "name": "hub.stl",
+     "path": "projects/v-gauge/models/hub.stl",
+     "size": 880984
+    },
+    {
+     "name": "peg.stl",
+     "path": "projects/v-gauge/models/peg.stl",
+     "size": 59984
+    },
+    {
+     "name": "pivot-pin.stl",
+     "path": "projects/v-gauge/models/pivot-pin.stl",
+     "size": 58084
+    },
+    {
+     "name": "slider.stl",
+     "path": "projects/v-gauge/models/slider.stl",
+     "size": 2184484
+    },
+    {
+     "name": "tip-cap.stl",
+     "path": "projects/v-gauge/models/tip-cap.stl",
+     "size": 52684
+    }
+   ],
+   "cad": [
+    {
+     "name": "arm-left.step",
+     "path": "projects/v-gauge/cad/arm-left.step",
+     "size": 1656453
+    },
+    {
+     "name": "arm-right-ruler.step",
+     "path": "projects/v-gauge/cad/arm-right-ruler.step",
+     "size": 5358161
+    },
+    {
+     "name": "assembly.step",
+     "path": "projects/v-gauge/cad/assembly.step",
+     "size": 15801166
+    },
+    {
+     "name": "hub.step",
+     "path": "projects/v-gauge/cad/hub.step",
+     "size": 3019277
+    },
+    {
+     "name": "peg.step",
+     "path": "projects/v-gauge/cad/peg.step",
+     "size": 36984
+    },
+    {
+     "name": "pivot-pin.step",
+     "path": "projects/v-gauge/cad/pivot-pin.step",
+     "size": 72539
+    },
+    {
+     "name": "slider.step",
+     "path": "projects/v-gauge/cad/slider.step",
+     "size": 5292384
+    },
+    {
+     "name": "tip-cap.step",
+     "path": "projects/v-gauge/cad/tip-cap.step",
+     "size": 62209
+    }
+   ],
+   "docs": [],
+   "images": [
+    {
+     "name": "cover.jpg",
+     "path": "projects/v-gauge/img/cover.jpg",
+     "size": 23111
+    }
+   ]
+  },
+  {
+   "title": "Compound gear reducer",
+   "year": 2024,
+   "context": "MECHENG 235 design project",
+   "order": 3,
+   "cover": "projects/gear-reducer/img/drawing.jpg",
+   "summary": "A sealed two-stage spur gearbox that drives a 250 kg conveyor load at 0.45 m/s from a 960 rpm motor.",
+   "description": "I selected the gears from a Boston Gear catalogue to approach the required 6.7:1 ratio, then sized the shafts, bearings, keys, set screws and seals with verification calculations at a safety factor of 2. The design delivers 73.6 N\u00b7m at the output. I modelled the full assembly in Inventor, with a shelled, bolted housing that clamps all six bearings, and produced dimensioned drawings for each part.",
+   "highlights": [
+    "Required output of 73.6 N\u00b7m and 1.1 kW, with a safety factor of 2",
+    "Shafts, keys and bearings verified by hand calculation",
+    "Sealed, bolted housing with M8 mounting feet"
+   ],
+   "tools": [
+    "Autodesk Inventor",
+    "MATLAB"
+   ],
+   "slug": "gear-reducer",
+   "models": [],
+   "cad": [
+    {
+     "name": "Bolt.ipt",
+     "path": "projects/gear-reducer/cad/Bolt.ipt",
+     "size": 259584
+    },
+    {
+     "name": "FinalAssembly.iam",
+     "path": "projects/gear-reducer/cad/FinalAssembly.iam",
+     "size": 662528
+    },
+    {
+     "name": "Gear1(input).ipt",
+     "path": "projects/gear-reducer/cad/Gear1(input).ipt",
+     "size": 253440
+    },
+    {
+     "name": "Gear2.ipt",
+     "path": "projects/gear-reducer/cad/Gear2.ipt",
+     "size": 252928
+    },
+    {
+     "name": "Gear3.ipt",
+     "path": "projects/gear-reducer/cad/Gear3.ipt",
+     "size": 252928
+    },
+    {
+     "name": "Gear4(output).ipt",
+     "path": "projects/gear-reducer/cad/Gear4(output).ipt",
+     "size": 253952
+    },
+    {
+     "name": "Input Shaft.ipt",
+     "path": "projects/gear-reducer/cad/Input Shaft.ipt",
+     "size": 334336
+    },
+    {
+     "name": "InputBearing.ipt",
+     "path": "projects/gear-reducer/cad/InputBearing.ipt",
+     "size": 214016
+    },
+    {
+     "name": "InputSeal.ipt",
+     "path": "projects/gear-reducer/cad/InputSeal.ipt",
+     "size": 283136
+    },
+    {
+     "name": "KeyG1.ipt",
+     "path": "projects/gear-reducer/cad/KeyG1.ipt",
+     "size": 210944
+    },
+    {
+     "name": "KeyG2.ipt",
+     "path": "projects/gear-reducer/cad/KeyG2.ipt",
+     "size": 217600
+    },
+    {
+     "name": "KeyG3.ipt",
+     "path": "projects/gear-reducer/cad/KeyG3.ipt",
+     "size": 216064
+    },
+    {
+     "name": "KeyG4.ipt",
+     "path": "projects/gear-reducer/cad/KeyG4.ipt",
+     "size": 209408
+    },
+    {
+     "name": "KeyIn.ipt",
+     "path": "projects/gear-reducer/cad/KeyIn.ipt",
+     "size": 214528
+    },
+    {
+     "name": "Layshaft.ipt",
+     "path": "projects/gear-reducer/cad/Layshaft.ipt",
+     "size": 317440
+    },
+    {
+     "name": "LayshaftBearing.ipt",
+     "path": "projects/gear-reducer/cad/LayshaftBearing.ipt",
+     "size": 212992
+    },
+    {
+     "name": "Output Shaft.ipt",
+     "path": "projects/gear-reducer/cad/Output Shaft.ipt",
+     "size": 318464
+    },
+    {
+     "name": "OutputBearing.ipt",
+     "path": "projects/gear-reducer/cad/OutputBearing.ipt",
+     "size": 218624
+    },
+    {
+     "name": "OutputSeal.ipt",
+     "path": "projects/gear-reducer/cad/OutputSeal.ipt",
+     "size": 288256
+    },
+    {
+     "name": "Shelled2.ipt",
+     "path": "projects/gear-reducer/cad/Shelled2.ipt",
+     "size": 1810432
+    }
+   ],
+   "docs": [
+    {
+     "name": "drawings.pdf",
+     "path": "projects/gear-reducer/docs/drawings.pdf",
+     "size": 1023711
+    },
+    {
+     "name": "report.pdf",
+     "path": "projects/gear-reducer/docs/report.pdf",
+     "size": 6397790
+    }
+   ],
+   "images": [
+    {
+     "name": "drawing.jpg",
+     "path": "projects/gear-reducer/img/drawing.jpg",
+     "size": 120724
+    }
+   ]
+  },
+  {
+   "title": "Warman challenge robot",
+   "year": 2024,
+   "context": "MECHENG 235, Warman design and build",
+   "order": 4,
+   "cover": "projects/warman-robot/img/cover.jpg",
+   "summary": "A wheeled robot with folding arms for the Warman ball-transfer challenge.",
+   "description": "This is the CAD model of our Warman challenge entry. A driven base carries folding arms that move the balls across the course. The model includes the chassis body, base plate, arm linkages, door, rear axle and wheels, all assembled in Inventor.",
+   "highlights": [
+    "Full robot assembly with the arm sub-assembly"
+   ],
+   "tools": [
+    "Autodesk Inventor"
+   ],
+   "slug": "warman-robot",
+   "models": [],
+   "cad": [
+    {
+     "name": "Arm.iam",
+     "path": "projects/warman-robot/cad/Arm.iam",
+     "size": 250368
+    },
+    {
+     "name": "Ball.ipt",
+     "path": "projects/warman-robot/cad/Ball.ipt",
+     "size": 274944
+    },
+    {
+     "name": "BaseArms.ipt",
+     "path": "projects/warman-robot/cad/BaseArms.ipt",
+     "size": 316928
+    },
+    {
+     "name": "BasePlate.ipt",
+     "path": "projects/warman-robot/cad/BasePlate.ipt",
+     "size": 406528
+    },
+    {
+     "name": "Body.ipt",
+     "path": "projects/warman-robot/cad/Body.ipt",
+     "size": 671232
+    },
+    {
+     "name": "Door.ipt",
+     "path": "projects/warman-robot/cad/Door.ipt",
+     "size": 242688
+    },
+    {
+     "name": "FINAL WHEEL 235.ipt",
+     "path": "projects/warman-robot/cad/FINAL WHEEL 235.ipt",
+     "size": 421888
+    },
+    {
+     "name": "Motor.ipt",
+     "path": "projects/warman-robot/cad/Motor.ipt",
+     "size": 248832
+    },
+    {
+     "name": "RearAxle.ipt",
+     "path": "projects/warman-robot/cad/RearAxle.ipt",
+     "size": 231936
+    },
+    {
+     "name": "UpperArm.ipt",
+     "path": "projects/warman-robot/cad/UpperArm.ipt",
+     "size": 267264
+    },
+    {
+     "name": "Velcro.ipt",
+     "path": "projects/warman-robot/cad/Velcro.ipt",
+     "size": 228352
+    },
+    {
+     "name": "WarmanPrototype.iam",
+     "path": "projects/warman-robot/cad/WarmanPrototype.iam",
+     "size": 523776
+    }
+   ],
+   "docs": [],
+   "images": [
+    {
+     "name": "cover.jpg",
+     "path": "projects/warman-robot/img/cover.jpg",
+     "size": 57779
+    },
+    {
+     "name": "prototype.jpg",
+     "path": "projects/warman-robot/img/prototype.jpg",
+     "size": 116009
+    }
+   ]
+  },
+  {
+   "title": "Autonomous robot mounts",
+   "year": 2026,
+   "context": "MECHENG 706, mobile robot project",
+   "order": 5,
+   "cover": "",
+   "summary": "Brackets and servo mounts for the MECHENG 706 autonomous robot.",
+   "description": "These are printed mounts for the MECHENG 706 robot: a rear bracket, a top bracket, two revisions of the servo holder, and the servo attachment.",
+   "highlights": [
+    "Servo holder iterated through two revisions"
+   ],
+   "tools": [
+    "Autodesk Inventor"
+   ],
+   "slug": "robot-mounts",
+   "models": [],
+   "cad": [
+    {
+     "name": "RearBracket.ipt",
+     "path": "projects/robot-mounts/cad/RearBracket.ipt",
+     "size": 340992
+    },
+    {
+     "name": "servoattachment.ipt",
+     "path": "projects/robot-mounts/cad/servoattachment.ipt",
+     "size": 4308480
+    },
+    {
+     "name": "servoholder.ipt",
+     "path": "projects/robot-mounts/cad/servoholder.ipt",
+     "size": 237056
+    },
+    {
+     "name": "servoholder2.ipt",
+     "path": "projects/robot-mounts/cad/servoholder2.ipt",
+     "size": 238592
+    },
+    {
+     "name": "topbracket.ipt",
+     "path": "projects/robot-mounts/cad/topbracket.ipt",
+     "size": 355328
+    }
+   ],
+   "docs": [],
+   "images": []
+  },
+  {
+   "title": "Prosthetic hand socket",
+   "year": 2026,
+   "context": "MECHENG 736, user-serviceable prosthetic hand",
+   "order": 6,
+   "cover": "projects/prosthetic-socket/img/cover.jpg",
+   "summary": "The socket and connecting pins for a user-serviceable prosthetic hand.",
+   "description": "These are the socket and the pin joints for the MECHENG 736 user-serviceable prosthetic hand.",
+   "highlights": [],
+   "tools": [
+    "Autodesk Inventor"
+   ],
+   "slug": "prosthetic-socket",
+   "models": [
+    {
+     "name": "pin-1.stl",
+     "path": "projects/prosthetic-socket/models/pin-1.stl",
+     "size": 14434
+    },
+    {
+     "name": "pin-2.stl",
+     "path": "projects/prosthetic-socket/models/pin-2.stl",
+     "size": 19634
+    }
+   ],
+   "cad": [
+    {
+     "name": "Socket.ipt",
+     "path": "projects/prosthetic-socket/cad/Socket.ipt",
+     "size": 569344
+    },
+    {
+     "name": "join1.ipt",
+     "path": "projects/prosthetic-socket/cad/join1.ipt",
+     "size": 178688
+    },
+    {
+     "name": "join2.ipt",
+     "path": "projects/prosthetic-socket/cad/join2.ipt",
+     "size": 192000
+    }
+   ],
+   "docs": [],
+   "images": [
+    {
+     "name": "cover.jpg",
+     "path": "projects/prosthetic-socket/img/cover.jpg",
+     "size": 29831
+    }
+   ]
+  }
+ ]
+}

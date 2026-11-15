@@ -1,0 +1,19 @@
+{
+  "title": "Real-time captioning glasses",
+  "year": 2026,
+  "context": "Part IV project (MECHENG), University of Auckland",
+  "order": 1,
+  "cover": "img/cover.jpg",
+  "summary": "A clip-on attachment that puts live captions in front of the wearer, for people with hearing loss.",
+  "description": "A glasses-mounted microphone streams speech over BLE to an iPhone for cloud transcription. The finished captions come back to a small OLED, and an optical path of two 15 mm lenses and a mirror projects them into view. I designed the printed housing, lid and extension arm in Inventor. The lens seats and sliding fits sit in the plane of the print bed, so the nozzle traces them directly and the interference fits assemble consistently.",
+  "highlights": [
+    "Housing, lid and arm print on one plate in 1 h 47 min (PLA, Prusa MK4S)",
+    "Interference-fit lenses, OLED and lid, with no fasteners",
+    "Separate counterweight on the opposite arm balances the glasses"
+  ],
+  "tools": [
+    "Autodesk Inventor",
+    "PrusaSlicer",
+    "ESP32-S3"
+  ]
+}

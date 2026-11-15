@@ -1,0 +1,10 @@
+# File name patterns the sync should never pick up (one per line, * wildcards allowed)
+Finger*
+Connection*
+banana*
+*fit_test*
+*keyhole*
+UoA_Inventor*
+Part[0-9]*
+assembly.iam
+Assembly[0-9]*

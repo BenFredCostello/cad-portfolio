@@ -1,0 +1,13 @@
+{
+  "title": "Prosthetic hand socket",
+  "year": 2026,
+  "context": "MECHENG 736, user-serviceable prosthetic hand",
+  "order": 6,
+  "cover": "img/cover.jpg",
+  "summary": "The socket and connecting pins for a user-serviceable prosthetic hand.",
+  "description": "These are the socket and the pin joints for the MECHENG 736 user-serviceable prosthetic hand.",
+  "highlights": [],
+  "tools": [
+    "Autodesk Inventor"
+  ]
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ben Costello · CAD Portfolio</title>
+<meta name="description" content="Mechanical design and CAD work by Ben Costello, Mechatronics Engineering, University of Auckland.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#14171c;--muted:#5d6673;--line:#e3e6eb;--accent:#1f5fd6;--accent-soft:#e8effc;--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header.site{border-bottom:1px solid var(--line);background:var(--card)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-weight:700;letter-spacing:-.01em;color:var(--ink)}.brand span{color:var(--muted);font-weight:500}
+nav a{color:var(--muted);margin-left:20px;font-size:14px}
+.hero{padding:56px 0 28px}
+.hero h1{font-size:clamp(28px,4vw,40px);letter-spacing:-.02em;margin:0 0 10px;line-height:1.15}
+.hero p{color:var(--muted);max-width:640px;margin:0;font-size:17px}
+.kicker{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;padding:12px 0 64px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:transform .15s,box-shadow .15s;color:inherit}
+.card:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(20,23,28,.08);text-decoration:none}
+.thumb{aspect-ratio:16/10;background:#fff center/contain no-repeat;border-bottom:1px solid var(--line);position:relative}
+.thumb.empty{background:repeating-linear-gradient(45deg,#f1f3f6 0 10px,#eceff3 10px 20px);display:grid;place-items:center;color:var(--muted);font-family:var(--mono);font-size:12px}
+.badge{position:absolute;top:10px;right:10px;background:rgba(20,23,28,.78);color:#fff;font-size:11px;padding:3px 8px;border-radius:99px;font-family:var(--mono)}
+.card .body{padding:16px 18px 18px}
+.meta{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.card h3{margin:4px 0 6px;font-size:18px;letter-spacing:-.01em}
+.card p{margin:0;color:var(--muted);font-size:14px}
+/* project page */
+.back{display:inline-block;margin:28px 0 8px;font-size:14px;color:var(--muted)}
+.proj-head h1{font-size:clamp(26px,3.5vw,36px);margin:4px 0 8px;letter-spacing:-.02em;line-height:1.2}
+.proj-head p.lede{color:var(--muted);font-size:17px;margin:0 0 24px;max-width:760px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;padding-bottom:64px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.viewer{position:relative;aspect-ratio:4/3;background:linear-gradient(#fff,#eef1f5)}
+.viewer canvas{display:block;width:100%!important;height:100%!important}
+.viewer .hint{position:absolute;left:12px;bottom:10px;font-size:12px;color:var(--muted);font-family:var(--mono);pointer-events:none}
+.viewer .loading{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-family:var(--mono);font-size:13px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;padding:12px;border-top:1px solid var(--line)}
+.tabs button{font:inherit;font-size:13px;border:1px solid var(--line);background:#fff;border-radius:99px;padding:5px 12px;cursor:pointer;color:var(--ink)}
+.tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.content{padding:20px 22px}
+.content h2{font-size:15px;margin:22px 0 8px;letter-spacing:.01em}.content h2:first-child{margin-top:0}
+.content p{margin:0 0 10px}
+.content ul{margin:0;padding-left:18px}.content li{margin:4px 0}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:8px;cursor:zoom-in}
+.side .content+.content{border-top:1px solid var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chip{background:var(--accent-soft);color:var(--accent);font-size:12px;padding:3px 9px;border-radius:99px}
+.files{list-style:none;padding:0!important;margin:0}
+.files li{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.files li:last-child{border-bottom:0}
+.files a{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.files span{font-family:var(--mono);color:var(--muted);font-size:12px;flex:none}
+.lightbox{position:fixed;inset:0;background:rgba(10,12,16,.88);display:none;place-items:center;z-index:50;cursor:zoom-out}
+.lightbox img{max-width:94vw;max-height:92vh;border-radius:6px;background:#fff}
+footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:13px}
+</style>
+<script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="#/">Ben Costello <span>· CAD portfolio</span></a>
+  <nav><a href="#/">Projects</a><a href="https://github.com/BenFredCostello" target="_blank" rel="noopener">GitHub</a></nav>
+</div></header>
+<main id="app" class="wrap"></main>
+<footer><div class="wrap">Ben Costello · Mechatronics Engineering, University of Auckland · Models are viewable in the browser; native Inventor and STEP files are available to download.</div></footer>
+<div class="lightbox" id="lb"><img alt=""></div>
+
+<script type="module">
+import * as THREE from 'three';
+import { STLLoader } from 'three/addons/loaders/STLLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const app = document.getElementById('app');
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pretty = n => n.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+const size = b => b > 1e6 ? (b/1e6).toFixed(1)+' MB' : Math.max(1, Math.round(b/1e3))+' KB';
+let data, viewer;
+
+async function load(){ data = await (await fetch('manifest.json', {cache:'no-cache'})).json(); route(); }
+window.addEventListener('hashchange', route);
+
+function route(){
+  if (viewer) { viewer.dispose(); viewer = null; }
+  const m = location.hash.match(/^#\/p\/([\w-]+)/);
+  const p = m && data.projects.find(x => x.slug === m[1]);
+  p ? project(p) : home();
+  window.scrollTo(0,0);
+}
+
+function home(){
+  document.title = 'Ben Costello · CAD Portfolio';
+  app.innerHTML = `
+  <section class="hero">
+    <div class="kicker">Mechanical design · CAD</div>
+    <h1>Things I've designed and built</h1>
+    <p>A selection of my CAD work from university projects and personal builds. Open a project to spin the model in 3D, read about the design, and download the source files.</p>
+  </section>
+  <section class="grid">${data.projects.map(p => `
+    <a class="card" href="#/p/${p.slug}">
+      <div class="thumb ${p.cover ? '' : 'empty'}" ${p.cover ? `style="background-image:url('${esc(p.cover)}')"` : ''}>
+        ${p.cover ? '' : 'Inventor files'}
+        ${p.models.length ? '<span class="badge">3D</span>' : ''}
+      </div>
+      <div class="body">
+        <div class="meta">${esc(p.year)} · ${esc(p.context)}</div>
+        <h3>${esc(p.title)}</h3>
+        <p>${esc(p.summary)}</p>
+      </div>
+    </a>`).join('')}
+  </section>`;
+}
+
+function project(p){
+  document.title = `${p.title} · Ben Costello`;
+  const fileList = list => `<ul class="files">${list.map(f => `<li><a href="${esc(f.path)}" download title="${esc(f.name)}">${esc(f.name)}</a><span>${size(f.size)}</span></li>`).join('')}</ul>`;
+  const imgs = p.images.filter(i => !p.cover.endsWith(i.name) || !p.models.length);
+  app.innerHTML = `
+  <a class="back" href="#/">← All projects</a>
+  <div class="proj-head">
+    <div class="meta">${esc(p.year)} · ${esc(p.context)}</div>
+    <h1>${esc(p.title)}</h1>
+    <p class="lede">${esc(p.summary)}</p>
+  </div>
+  <div class="layout">
+    <div>
+      <div class="panel">
+        ${p.models.length ? `
+          <div class="viewer" id="viewer"><div class="loading">Loading model…</div><div class="hint">drag to rotate · scroll to zoom · right-drag to pan</div></div>
+          ${p.models.length > 1 ? `<div class="tabs" id="tabs">${p.models.map((m,i) => `<button data-i="${i}" class="${i?'':'on'}">${esc(pretty(m.name))}</button>`).join('')}</div>` : ''}`
+        : (p.cover ? `<div class="viewer" style="background:#fff url('${esc(p.cover)}') center/contain no-repeat"></div>` : '')}
+        <div class="content">
+          <h2>About</h2><p>${esc(p.description)}</p>
+          ${p.highlights?.length ? `<h2>Highlights</h2><ul>${p.highlights.map(h => `<li>${esc(h)}</li>`).join('')}</ul>` : ''}
+          ${imgs.length ? `<h2>Images</h2><div class="gallery">${imgs.map(i => `<img src="${esc(i.path)}" alt="${esc(pretty(i.name))}" loading="lazy">`).join('')}</div>` : ''}
+        </div>
+      </div>
+    </div>
+    <aside class="side panel">
+      ${p.tools?.length ? `<div class="content"><h2>Tools</h2><div class="chips">${p.tools.map(t => `<span class="chip">${esc(t)}</span>`).join('')}</div></div>` : ''}
+      ${p.docs.length ? `<div class="content"><h2>Drawings &amp; reports</h2>${fileList(p.docs)}</div>` : ''}
+      ${p.models.length ? `<div class="content"><h2>3D models (STL)</h2>${fileList(p.models)}</div>` : ''}
+      ${p.cad.length ? `<div class="content"><h2>Source CAD</h2>${fileList(p.cad)}</div>` : ''}
+    </aside>
+  </div>`;
+  app.querySelectorAll('.gallery img').forEach(img => img.onclick = () => { lb.querySelector('img').src = img.src; lb.style.display = 'grid'; });
+  if (p.models.length) {
+    viewer = makeViewer(document.getElementById('viewer'));
+    viewer.show(p.models[0].path);
+    document.getElementById('tabs')?.addEventListener('click', e => {
+      const b = e.target.closest('button'); if (!b) return;
+      document.querySelectorAll('#tabs button').forEach(x => x.classList.toggle('on', x === b));
+      viewer.show(p.models[+b.dataset.i].path);
+    });
+  }
+}
+const lb = document.getElementById('lb'); lb.onclick = () => lb.style.display = 'none';
+
+function makeViewer(el){
+  const renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  el.prepend(renderer.domElement);
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(35, 4/3, 0.1, 10000);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x8a94a6, 1.1));
+  const key = new THREE.DirectionalLight(0xffffff, 1.6); key.position.set(1, 1.4, 1.2); scene.add(key);
+  const fill = new THREE.DirectionalLight(0xffffff, .5); fill.position.set(-1.2, .3, -.8); scene.add(fill);
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true; controls.autoRotate = true; controls.autoRotateSpeed = 1.2;
+  controls.addEventListener('start', () => controls.autoRotate = false);
+  const material = new THREE.MeshStandardMaterial({color:0x3c78d8, metalness:.1, roughness:.55});
+  let mesh, grid, raf, alive = true, token = 0;
+  const loading = el.querySelector('.loading');
+  function resize(){ const w = el.clientWidth, h = el.clientHeight; renderer.setSize(w, h, false); camera.aspect = w/h; camera.updateProjectionMatrix(); }
+  const ro = new ResizeObserver(resize); ro.observe(el); resize();
+  (function tick(){ if (!alive) return; controls.update(); renderer.render(scene, camera); raf = requestAnimationFrame(tick); })();
+  return {
+    show(url){
+      const t = ++token; loading.style.display = 'grid'; loading.textContent = 'Loading model…';
+      new STLLoader().load(url, geo => {
+        if (t !== token) return;
+        if (mesh) { scene.remove(mesh); mesh.geometry.dispose(); }
+        if (grid) scene.remove(grid);
+        geo.rotateX(-Math.PI/2); geo.computeVertexNormals(); geo.computeBoundingBox();
+        const b = geo.boundingBox, c = new THREE.Vector3(); b.getCenter(c);
+        geo.translate(-c.x, -b.min.y, -c.z);
+        mesh = new THREE.Mesh(geo, material); scene.add(mesh);
+        const s = new THREE.Vector3(); b.getSize(s); const r = s.length()/2;
+        grid = new THREE.GridHelper(r*4, 20, 0xc9ced6, 0xe1e5ea); scene.add(grid);
+        controls.target.set(0, s.y/2, 0);
+        camera.position.set(r*1.7, r*1.3 + s.y/2, r*2.1); camera.near = r/100; camera.far = r*100; camera.updateProjectionMatrix();
+        controls.autoRotate = true; loading.style.display = 'none';
+      }, undefined, () => { loading.textContent = 'Could not load this model'; });
+    },
+    dispose(){ alive = false; cancelAnimationFrame(raf); ro.disconnect(); renderer.dispose(); }
+  };
+}
+load();
+</script>
+</body>
+</html>

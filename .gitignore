@@ -1,0 +1,5 @@
+_inbox/
+tools/last-sync.txt
+tools/sync.log
+*.skip
+__pycache__/

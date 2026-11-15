@@ -1,0 +1,15 @@
+{
+  "title": "Warman challenge robot",
+  "year": 2024,
+  "context": "MECHENG 235, Warman design and build",
+  "order": 4,
+  "cover": "img/cover.jpg",
+  "summary": "A wheeled robot with folding arms for the Warman ball-transfer challenge.",
+  "description": "This is the CAD model of our Warman challenge entry. A driven base carries folding arms that move the balls across the course. The model includes the chassis body, base plate, arm linkages, door, rear axle and wheels, all assembled in Inventor.",
+  "highlights": [
+    "Full robot assembly with the arm sub-assembly"
+  ],
+  "tools": [
+    "Autodesk Inventor"
+  ]
+}

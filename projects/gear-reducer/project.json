@@ -1,0 +1,18 @@
+{
+  "title": "Compound gear reducer",
+  "year": 2024,
+  "context": "MECHENG 235 design project",
+  "order": 3,
+  "cover": "img/drawing.jpg",
+  "summary": "A sealed two-stage spur gearbox that drives a 250 kg conveyor load at 0.45 m/s from a 960 rpm motor.",
+  "description": "I selected the gears from a Boston Gear catalogue to approach the required 6.7:1 ratio, then sized the shafts, bearings, keys, set screws and seals with verification calculations at a safety factor of 2. The design delivers 73.6 N\u00b7m at the output. I modelled the full assembly in Inventor, with a shelled, bolted housing that clamps all six bearings, and produced dimensioned drawings for each part.",
+  "highlights": [
+    "Required output of 73.6 N\u00b7m and 1.1 kW, with a safety factor of 2",
+    "Shafts, keys and bearings verified by hand calculation",
+    "Sealed, bolted housing with M8 mounting feet"
+  ],
+  "tools": [
+    "Autodesk Inventor",
+    "MATLAB"
+  ]
+}

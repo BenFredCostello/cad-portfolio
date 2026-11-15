@@ -1,0 +1,12 @@
+{
+  "title": "Project title",
+  "year": 2026,
+  "context": "Course or personal project",
+  "summary": "One sentence shown on the project card.",
+  "description": "A paragraph about what it is, what you designed, and the key decisions.",
+  "highlights": ["A key number or result", "A design decision worth noting"],
+  "tools": ["Autodesk Inventor"],
+  "order": 10,
+  "cover": "img/cover.jpg",
+  "hidden": true
+}

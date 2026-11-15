@@ -1,0 +1,19 @@
+{
+  "title": "Folding V-gauge",
+  "year": 2026,
+  "context": "Personal project",
+  "order": 2,
+  "cover": "img/cover.jpg",
+  "summary": "A 3D-printed tool that measures cylinder diameters: diameter = N \u00d7 slider reading.",
+  "description": "Two arms form a V that locks at one of four angles (\u00d71, \u00d72, \u00d75, \u00d710). A slider pushed up through the apex touches the object, and you multiply its reading by the setting. Folded to 0\u00b0, it becomes a 100 mm ruler. Each angle is set so that sin a = N/(N+2), which makes the diameter exactly N times the slider reading. The geometry is generated from a parametric Python script, and a fit-test print tunes the clearances.",
+  "highlights": [
+    "Measures 13\u2013322 mm diameters across four settings",
+    "Snap pins and index pegs, with no bolts or other hardware",
+    "Clearances tuned with a printed fit test (0.15\u20130.45 mm)"
+  ],
+  "tools": [
+    "Python (parametric CAD)",
+    "Autodesk Inventor",
+    "FDM printing"
+  ]
+}
