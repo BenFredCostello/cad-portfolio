@@ -8,3 +8,9 @@ UoA_Inventor*
 Part[0-9]*
 assembly.iam
 Assembly[0-9]*
+Socket*
+join[0-9]*
+RearBracket*
+topbracket*
+servoholder*
+servoattachment*
